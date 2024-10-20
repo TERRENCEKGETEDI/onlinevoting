@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="votes.css">
+</head>
+<body>
+
+    <div id="navBtn">
+        <button onclick="home()">HOME</button><br>
+        <button onclick="votes()">VOTES</button><br>
+        <button onclick="parties()">PARTIES</button><br>
+        <button onclick="privacy()">PRIVACY</button><br>
+        <button onclick="aboutus()">ABOUT US</button><br>
+    </div>
+    <h1>Leading party per province...</h1>
+    <hr>
+    <table>
+        <tr>
+            <th><h1>Provinces</h1></th>
+            <th><h1>Party</h1></th>
+        </tr>
+        <tr>
+            <td><h2>Eastern Cape </h2></td>
+            <td><h2 id="easternCape">DA</h2></td>
+        </tr>
+		<tr>
+            <td><h2>Free State </h2></td>
+            <td><h2 id="freeState">ANC</h2></td>
+        </tr>
+		<tr>
+            <td><h2>Gauteng </h2></td>
+            <td><h2 id="gauteng">ANC</h2></td>
+        </tr>
+		<tr>
+            <td><h2>KwaZulu Natal </h2></td>
+            <td><h2 id="kwaZuluNatal">MK</h2></td>
+        </tr>
+		<tr>
+            <td><h2>Limpopo </h2></td>
+            <td><h2 id="limpopo">ANC</h2></td>
+        </tr>
+		<tr>
+            <td><h2>Mpumalanga </h2></td>
+            <td> <h2 id="mpumalanga">ANC</h2></td>
+        </tr>
+		<tr>
+            <td><h2>North West </h2></td>
+            <td><h2 id="northWest">EFF</h2></td>
+        </tr>
+		<tr>
+            <td><h2>Northern Cape </h2></td>
+            <td><h2 id="northernCape">EFF</h2></td>
+        </tr>
+		<tr>
+            <td><h2>Western Cape </h2></td>
+            <td><h2 id="westernCape">MK</h2></td>
+        </tr>
+    </table><br><br>
+    <!-- <h1>Votes...</h1><hr>
+    <table>
+        <tr>
+            <th><h1>Registered</h1></th>
+            <th><h1>Voted</h1></th>
+            <th><h1>Remaing</h1></th>
+        </tr>
+        <tr>
+            <td><h2 id="user-count">Loading...</h2></td>
+            <td><h2 id="voted">Loading...</h2></td>
+            <td><h2 id="remaing">Loading...</h2></td>
+        </tr>
+    </table> -->
+    <!-- <p id="user-ids"></p> -->
+    <script src="votes.js"></script>
+</body>
+</html>

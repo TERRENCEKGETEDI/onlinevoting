@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- <link rel="stylesheet" href="register.css"> -->
+     <style>
+        *{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    background: radial-gradient(red,green,orange,blue);
+}
+/* #navBtn{
+    float: left;
+    height: 100vh;
+    padding: 2%;
+}
+#navBtn button{
+    padding: 5px;
+    font-weight: 1000;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 0 10px;
+}
+#navBtn button:active{
+    background-color: rgb(65, 194, 65);
+} */
+#register{
+    /* background-color: aqua; */
+    height: 100vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+form{
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+#register fieldset{
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+#register fieldset legend{
+     font-size: larger;
+     text-align: center;
+     background-color: transparent;
+     border-radius: 10px;
+     padding: 10px;
+     box-shadow: 0 0 10px;
+}#register fieldset{
+    background: linear-gradient(97deg,rgba(0, 255, 255,.4) 21%,transparent 20%);
+    height: 100%;
+}
+#register fieldset label{
+    width: 150px;
+    float: left;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+#register fieldset input{
+    margin: 10px;
+    border-radius: 10px;
+    height: 20px;
+    padding: 5px 10px;
+    width: 70%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px;
+}
+#register fieldset select{
+    margin: 10px;
+    border-radius: 10px;
+    height: 20px;
+    background-color: transparent;
+    height: 30px;
+    font-weight: bolder;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px;
+}
+#register fieldset select option{
+    background-color: wheat;
+}
+#register fieldset select option::selection{
+    background-color: red;
+}
+#sub{
+    /* background-color: red; */
+    display: flex;
+}
+#sub button{
+    margin: auto;
+    padding: 5px;
+    border: none;
+    font-weight: 1000;
+    border-radius: 10px;
+    background: linear-gradient(to left,black,gold,black);
+}
+@media only screen and (max-width: 400px) {
+    #register{
+        width: 100%;
+    }
+    form{
+        width: 95%;
+    }
+    #register fieldset legend{
+        font-size: large;
+        padding: 5px;
+    }#register fieldset{
+        background: none;
+    }
+    #register fieldset label{
+        font-size: 1rem;
+        font-weight: normal;
+    }
+}
+     </style>
+</head>
+<body>
+    <div id="register">
+        <h1>Register</h1><br><br>
+        <form action="/register" method="POST">
+            <fieldset>
+                <legend>Fill in your details</legend>
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" id="firstname" required/><br>
+                <label for="secondname">Second Name</label>
+                <input type="text" name="secondname" id="secondname" required/><br>
+                <label for="surname">Surname</label>
+                <input type="text" name="surname" id="surname" required/><br>
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" id="phone" required/><br>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" required/><br>
+                <label for="idNO">ID Number</label>
+                <input type="text" name="idNO" id="idNO" minlength="13" maxlength="13" required/><br>
+                <label for="password">Password</label>
+                <input type="password" name="password" minlength="8" maxlength="15" id="password" required/><br>
+            </fieldset>
+            <fieldset>
+                <legend>Location</legend>
+                <label for="province">Province</label>
+                <select name="province" id="province" required>
+                    <option value="">Select province</option>
+                    <option value="Eastern Cape">Eastern Cape</option>
+                    <option value="Free State">Free State</option>
+                    <option value="Gauteng">Gauteng</option>
+                    <option value="KwaZulu Natal">KwaZulu Natal</option>
+                    <option value="Limpopo">Limpopo</option>
+                    <option value="Mpumalanga">Mpumalanga</option>
+                    <option value="North West">North West</option>
+                    <option value="Northern Cape">Northern Cape</option>
+                    <option value="Western Cape">Western Cape</option>
+                </select><br>
+                <label for="district">District</label>
+                <select name="district" id="district" required>
+                    <option value="">Select district</option>
+                    <optgroup  label="Eastern Cape">
+                        <option value="Amathole">Amathole</option>
+                        <option value="Ukhahlamba">Ukhahlamba</option>
+                        <option value="Alfred Nzo">Alfred Nzo</option>
+                        <option value="Cacadu">Cacadu</option>
+                    </optgroup>
+                    <optgroup label="Free State">
+                        <option value="Motheo">Motheo</option>
+                        <option value="Lejweleputswa">Lejweleputswa</option>
+                        <option value="Xhariep">Xhariep</option>
+                        <option value="Fezile Dabi">Fezile Dabi</option>
+                    </optgroup>
+                    <optgroup label="KwaZulu Natal">
+                        <option value="uMgungundlovu">uMgungundlovu</option>
+                        <option value="Umkhanyakude">Umkhanyakude</option>
+                        <option value="Zululand">Zululand</option>
+                        <option value="Uthungulu">Uthungulu</option>
+                    </optgroup>
+                    <optgroup label="Limpopo">
+                        <option value="Sekhukhune">Sekhukhune</option>
+                        <option value="Capricorn">Capricorn</option>
+                        <option value="Mopani">Mopani</option>
+                        <option value="Vhembe">Vhembe</option>
+                    </optgroup>
+                    <optgroup label="Mpumalanga">
+                        <option value="Ehlanzeni">Ehlanzeni</option>
+                        <option value="Gert Sibande ">Gert Sibande </option>
+                        <option value="Nkangala">Nkangala</option>
+                    </optgroup>
+                    <optgroup label="Northern Cape">
+                        <option value="Kgalagadi">Kgalagadi</option>
+                        <option value="Namakwa">Namakwa</option>
+                        <option value="Siyanda">Siyanda</option>
+                        <option value="Frances Baard">Frances Baard</option>
+                    </optgroup>
+                    <optgroup label="North West">
+                        <option value="Bojanala Platinum">Bojanala Platinum</option>
+                        <option value="Dr Kenneth Kaunda">Dr Kenneth Kaunda</option>
+                        <option value="Dr Ruth Segomotsi Mompati">Dr Ruth Segomotsi Mompati</option>
+                        <option value="Ngaka Modiri Molema">Ngaka Modiri Molema</option>
+                    </optgroup>
+                    <optgroup label="Western Cape">
+                        <option value="Eden">Eden</option>
+                        <option value="Overberg">Overberg</option>
+                        <option value="Central Karoo">Central Karoo</option>
+                        <option value="West Coast">West Coast</option>
+                    </optgroup>
+                    <optgroup label="Gauteng">
+                        <option value="West Rand">West Rand</option>
+                        <option value="Sedibeng">Sedibeng</option>
+                        <option value="Metsweding">Metsweding</option>
+                        <option value="Ekurhuleni Metropolitan Municipality">Ekurhuleni Metropolitan</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+            <div id="sub">
+                <button type="submit">Register</button>
+            </div>
+            <p>Already have an account? <a href="/">Login here</a></p>
+        </form>
+    </div>
+</body>
+</html>

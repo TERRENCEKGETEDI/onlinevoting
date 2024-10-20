@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="voting.css"/>
+</head>
+<body>
+    <!-- <h1>Note you cannot change after confirming</h1> -->
+    <!-- <form action=""> -->
+        <div id="navBtn">
+            <button onclick="home()">HOME</button><br>
+            <button onclick="votes()">VOTES</button><br>
+            <button onclick="parties()">PARTIES</button><br>
+            <button onclick="privacy()">PRIVACY</button><br>
+            <button onclick="aboutus()">ABOUT US</button><br>
+        </div>
+        <div>
+            
+        </div>
+        <fieldset>
+            <legend>Choose from the listed to voted</legend>
+            <label for="country">Country</label>
+            <select name="" id="country">
+                <option value="">Select your party</option>
+                <option value="ANC">ANC</option>
+                <option value="DA">DA</option>
+                <option value="MK">MK</option>
+                <option value="EFF">EFF</option>
+                <option value="IFP">IFP</option>
+                <option value="PA">PA</option>
+                <option value="VFPLUS">VF PLUS</option>
+                <option value="ACTIONSA">ACTIONSA</option>
+                <option value="UDM">UDM</option>
+                <option value="ACDP">ACDP</option>
+            </select><br>
+            <label for="province">Province</label>
+            <select name="" id="province">
+                <option value="">Select your party</option>
+                <option value="ANC">ANC</option>
+                <option value="DA">DA</option>
+                <option value="MK">MK</option>
+                <option value="EFF">EFF</option>
+                <option value="IFP">IFP</option>
+                <option value="PA">PA</option>
+                <option value="VFPLUS">VF PLUS</option>
+                <option value="ACTIONSA">ACTIONSA</option>
+                <option value="UDM">UDM</option>
+                <option value="ACDP">ACDP</option>
+            </select><br>
+            <label for="district">District</label>
+            <select name="" id="district">
+                <option value="">Select your party</option>
+                <option value="ANC">ANC</option>
+                <option value="DA">DA</option>
+                <option value="MK">MK</option>
+                <option value="EFF">EFF</option>
+                <option value="IFP">IFP</option>
+                <option value="PA">PA</option>
+                <option value="VFPLUS">VF PLUS</option>
+                <option value="ACTIONSA">ACTIONSA</option>
+                <option value="UDM">UDM</option>
+                <option value="ACDP">ACDP</option>
+            </select><br>
+            <p id="user-data"></p>
+            <div>
+                <button onclick="submit()">Submit</button>
+            </div>
+        </fieldset>
+        <h2>OTP to be sent to your email and phone number for verification</h2>
+        <br><br><br>
+        <p onclick="hh()"></p>
+    <!-- </form> -->
+     <fieldset id="verifying">
+        <legend>verifying...</legend>
+        <h2>you can update your parties, and new OTP to be generated</h2><br><br>
+        <label for="OTP">OTP</label>
+        <input type="number" id="OTP" placeholder="_ _ _ _ _ _"/>
+        <button onclick="confirm()">CONFIRM</button>
+     </fieldset>
+     <p onclick="deleterecords()">.</p>
+     <script src="voting.js"></script>
+     
+</body>
+</html>
